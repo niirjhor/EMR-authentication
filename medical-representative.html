@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>EMR Dapp</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <script src="js/bundle.js"></script> -->
+    <!-- Custom CSS -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container-fluid bg-dark">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <a class="navbar-brand text-white" href="#">EMR Dapp</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="text-white" href="./register.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <section class="container">
+        <div class="d-flex justify-content-between pt-5">
+
+            <div class="addDoctor d-flex flex-column col-md-5">
+                <div>
+
+                    <h5 class="text-center">Add Doctor</h5>
+                </div>
+                <div>
+
+                    <form class="row g-3 needs-validation" novalidate>
+
+                        <div class="col-md-12">
+
+                            <label for="validationCustom01" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="validationCustom01"
+                                value="Md. Kaim Iftahaj Nirjhor" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="validationCustom04" class="form-label">Speciality</label>
+                            <select class="form-select" id="validationCustom04" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option>Allergy and immunology</option>
+                                <option>Anesthesiology</option>
+                                <option>Dermatology</option>
+                                <option>Emergency Medical</option>
+                                <option>Surgery</option>
+                                <option>Urology</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid Speciality.
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <label for="validationCustomUsername" class="form-label">Profile</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                <input type="text" class="form-control" id="validationCustomUsername"
+                                    aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Please choose a profile.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="validationCustom03" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid Email Address.
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="validationCustomUsername" class="form-label">Phone Number</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">+880</span>
+                                <input type="text" class="form-control" id="validationCustomUsername"
+                                    aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Please choose a number.
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Submit Form
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-dark text-primary">
+                                            <h5 class="modal-title" id="exampleModalLabel"> Status:Transaction
+                                                mined and execution succeed</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body bg-dark text-white">
+                                            transaction hash:
+                                            0xa1352b672289a03105db81720d3d917b86a3bc1058d29141cb <br>
+                                            from:0x5B38Da6a701c568545dCfcB03FcB875f56beddC4 <br>
+                                            to MedicalRecord.addDoctor(address,string,string,string)
+                                            0xd9145CCE52D386f254917e481eB44e9943F3 <br>
+                                            gas: 80000000 gas <br>
+                                            transaction cost: 80000000 gas <br>
+                                            execution cost: 673008 gas <br>
+                                            hash :0xa1352b672289a03105db81720d3d917b86a3bc1058d291 <br>
+                                            Updated at: 21-08-08T18:33:57.050Z
+                                            Created at: 21-08-08T18:33:57.050Z
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <button class="btn btn-primary" type="submit">Submit form</button> -->
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="addDoctor d-flex flex-column col-md-5">
+                <div>
+
+                    <h5 class="text-center">Add Patient</h5>
+                </div>
+                <div>
+
+                    <form class="row g-3 needs-validation" novalidate>
+
+                        <div class="col-md-12">
+
+                            <label for="validationCustom01" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-12">
+                            <label for="validationCustomUsername" class="form-label">ID</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                <input type="text" class="form-control" id="validationCustomUsername"
+                                    aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Please choose a ID.
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="formFileMultiple" class="form-label">Patient Medical History</label>
+                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="validationCustom03" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid Email Address.
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="validationCustomUsername" class="form-label">Phone Number</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">+880</span>
+                                <input type="text" class="form-control" id="validationCustomUsername"
+                                    aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Please choose a number.
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Submit Form
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-dark text-primary">
+                                            <h5 class="modal-title" id="exampleModalLabel"> Status true Transaction
+                                                mined and execution succeed</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body bg-dark text-white">
+                                            transaction hash: 0xa1352b672289a03105db81720d3d917b86a3bc1058d29141c
+                                            from: 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
+                                            to MedicalRecord.addDoctor(address,string,string,string)
+                                            0xd9145CCE52D386f254917e481eB44e9943F39138
+                                            gas: 80000000 gas
+                                            transaction cost: 80000000 gas
+                                            execution cost: 673008 gas
+                                            hash: 0xa1352b672289a03105db81720d3d917b86a3bc1058d29141cb373
+                                            Updated at: 21-08-08T17:23:57.050Z <br>
+                                            Created at: 21-08-08T17:23:57.050Z
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <button class="btn btn-primary" type="submit">Submit form</button> -->
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="container mt-5 ">
+
+        <div class="d-flex flex-wrap row g-5">
+
+            <div class="d-flex flex-column justify-content-center col-md-6">
+                <h5 class="text-center">Add Record</h5>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Paitent Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Patient's Name">
+                </div>
+                <div class="col-md-12 my-3">
+                    <label for="formFileMultiple" class="form-label">Patient Medical History</label>
+                    <input class="form-control" type="file" id="formFileMultiple" multiple>
+                </div>
+                <div class="col-12 d-flex justify-content-between">
+                    <button class="col-6 btn btn-secondary" type="submit"><a class="text-white"
+                            href="Record of Md Kaim Iftahaj Nirjhor for MR.html">View Patients
+                            Medical Data</a></button>
+                    <button class="col-4 btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </div>
+            <div class="d-flex flex-column justify-content-center col-md-6">
+
+                <h5 class="text-center">Request Doctor</h5>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Doctor Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Doctor's Name">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Paitent Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Patient's Name">
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </div>
+            <div class="d-flex flex-column  justify-content-center align-items-center  col-md-12 ">
+
+                <h5>Verify Record</h5>
+                <div class="col-md-6 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Patients's Signature</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Doctor's Name">
+                </div>
+                <div class="col-md-6 my-3">
+                    <label for="formFileMultiple" class="form-label">Patient Record</label>
+                    <input class="form-control" type="file" id="formFileMultiple" multiple>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center col-md-6">
+
+                <h5>Address of Doctor</h5>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Doctor Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Doctor's Name">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Doctor Address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Patient's Name">
+                </div>
+                <div class="col-12 ">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center col-md-6">
+
+                <h5>Address of Patient</h5>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Patient's Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Doctor's Name">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Patient's Address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Patient's Name">
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </div>
+            <div class="d-flex flex-column  justify-content-center align-items-center  col-md-12">
+                <h2 class="fw-bold my-5">Doctor in Patient</h2>
+                <h5>Doctor Profile</h5>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Doctor Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Doctor's Name">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Doctor Title</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Patient's Name">
+                </div>
+                <div class="col-md-12 my-3">
+                    <label for="formFileMultiple" class="form-label">Doctor's History</label>
+                    <input class="form-control" type="file" id="formFileMultiple" multiple>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column align-items-center col-md-4">
+
+
+                <h5>Get Doctor</h5>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Patient's Request</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Doctor's Name">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Doctor Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Patient's Name">
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center col-md-4">
+
+                <h5>Get Patient</h5>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Patient's Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Doctor's Name">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Patient's Signature</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Patient's Name">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Date of Appointment</label>
+                    <input type="date" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Patient's Name">
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </div>
+            <div class="d-flex flex-column align-items-center justify-content-center col-md-4">
+
+                <h5>Get Record</h5>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Patient's Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Doctor's Name">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Patient's Signature</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Patient's Name">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Patient's Recognised Url</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Patient's Name">
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </div>
+            <div class="d-flex flex-column  justify-content-center align-items-center  col-md-12">
+                <h2 class="fw-bold my-5">Patient in Doctor</h2>
+                <h5>Patient Profile</h5>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Patient Name</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Doctor's Name">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Patient's Address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Patient's Name">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Patient's Phone Number</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Patient's Name">
+                </div>
+                <div class="col-md-12 mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Patient's Last Appointment Date</label>
+                    <input type="date" class="form-control" id="exampleFormControlInput1"
+                        placeholder="Enter Patient's Name">
+                </div>
+
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- <script src="js/jquery.js"></script> -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script> -->
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var key = url.searchParams.get("key");
+        key = key.toLocaleLowerCase();
+        var ailmentsDict = {};
+
+        ailmentsDict[0] = "Cancer";
+        ailmentsDict[1] = "Heart Attack";
+        ailmentsDict[2] = "Brain Tumour";
+        ailmentsDict[3] = "Anaemia";
+        ailmentsDict[4] = "Alzheimer's";
+        ailmentsDict[5] = "Gastroenteritis";
+        ailmentsDict[6] = "Tuberculosis";
+        ailmentsDict[7] = "Spondylolisthesis";
+
+        toggleRecordsButton = 0;
+
+        $(document).ready(function () {
+
+            // console.log(key);
+            // console.log(contractInstance.get_patient.call(key, {gas: 1000000}));
+            $(".alert-danger").hide();
+
+            var a = 0;
+            var b = 0;
+
+            var PatientAddress = 0;
+            var DocAddr = 0;
+            var Diagnosis = 0;
+            var PatientName = [];
+            var DocName = [];
+            var Patient_Doctor = 0;
+
+            contractInstance.get_insurer(key, { gas: 1000000 }, function (error, result) {
+                if (!error) {
+                    a = result[0];
+                    b = result[1];
+                    PatientAddress = result[2];
+                    DocAddr = result[3];
+                    Diagnosis = result[4];
+                    // Patient_Doctor = [PatientAddress,DocAddr];
+                    console.log(Diagnosis);
+                    $("#name").html(a);
+                    $("#noCustomers").html(b.c[0]);
+                    var table = document.getElementById("claims");
+
+                    for (var index = 0; index < Diagnosis.length; index++) {
+                        var row = table.insertRow(index + 1);
+                        var cell1 = row.insertCell(0);
+                        var cell2 = row.insertCell(1);
+                        var cell3 = row.insertCell(2);
+                        // var row = table.rows[index+1];
+                        var cell4 = row.insertCell(3);
+                        var cell5 = row.insertCell(4);
+                        var cell6 = row.insertCell(5);
+
+                        cell5.innerHTML = ailmentsDict[Diagnosis[index]];
+                        cell6.innerHTML = '<button onclick="releaseClaim(this)" class="btn btn-success">Release Claim</button>';
+
+                    }
+
+                    PatientAddress.forEach(function (listItem, index) {
+                        contractInstance.get_patient.call(listItem, { gas: 1000000 }, function (error, result) {
+                            // var table = document.getElementById("accessDoc");
+                            if (!error) {
+                                PatientName.push(result[0]);
+                                var row = table.rows[index + 1];
+                                var cell1 = row.cells[0];
+                                var cell2 = row.cells[1];
+                                var cell3 = row.cells[2];
+                                cell2.className = "publicKeyPatient";
+                                cell1.innerHTML = result[0];
+                                cell2.innerHTML = listItem;
+                                cell3.innerHTML = '<button onclick="viewRecords(this)" class="btn btn-info">View Records</button>';
+                            }
+                            else
+                                console.error(error);
+                        });
+                    });
+
+                    DocAddr.forEach(function (listItem, index) {
+                        contractInstance.get_doctor.call(listItem, { gas: 1000000 }, function (error, result) {
+                            // var table = document.getElementById("accessDoc");
+                            if (!error) {
+                                DocName.push(result[0]);
+                                var row = table.rows[index + 1];
+                                var cell4 = row.cells[3];
+                                cell4.innerHTML = result[0];
+                            }
+                            else
+                                console.error(error);
+                        });
+                    });
+                }
+                else
+                    console.error(error);
+            });
+
+        });
+
+
+        function releaseClaim(element) {
+            rNo = element.parentNode.parentNode.rowIndex;
+            var row = document.getElementById("claims").rows[rNo];
+            var patientAddr = row.cells[1].innerHTML;
+            var viewRecordsButton = row.cells[2];
+            console.log(viewRecordsButton);
+
+            contractInstance.accept_claim(patientAddr, { from: key, gas: 1000000, value: web3.toWei(4, 'ether') }, function (error, result) {
+                if (!error) {
+                    if (toggleRecordsButton % 2 != 0) {
+                        console.log("boo");
+                        $(viewRecordsButton).click();
+                    }
+
+                    document.getElementById("claims").deleteRow(rNo);
+                }
+                else {
+                    // $(".alert-danger").show();
+                    console.log(error);
+                }
+
+            });
+        }
+
+        function viewRecords(element) {
+            var table = document.getElementById("claims");
+            var index = element.parentNode.parentNode.rowIndex;
+            var patientAddress = table.rows[index].cells[1].innerHTML;
+
+            if (toggleRecordsButton % 2 == 0) {
+
+                patientRecord = "";
+
+                contractInstance.get_hash(patientAddress, { gas: 1000000 }, function (error, result) {
+                    if (!error) {
+                        $.get("http://localhost:8080/ipfs/" + result, function (data) {
+                            patientRecord = data;
+                            var row1 = table.insertRow(index + 1);
+                            var cell1 = row1.insertCell(0);
+                            cell1.colSpan = 6;
+                            cell1.innerHTML = "<pre>" + patientRecord + "</pre";
+                        })
+                    } else {
+                        console.log(error);
+                    }
+                })
+
+                toggleRecordsButton += 1;
+
+                element.innerHTML = "Hide Records";
+                element.className = "btn btn-danger";
+            } else {
+                row = table.rows[index + 1];
+                $(row).hide();
+
+                toggleRecordsButton -= 1;
+
+                element.innerHTML = "View Records";
+                element.className = "btn btn-info"
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

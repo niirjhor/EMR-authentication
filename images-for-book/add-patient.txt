@@ -1,0 +1,10 @@
+status	true Transaction mined and execution succeed
+ transaction hash: 0x628c83cf80c5a2da68e5a006b03dd331d0759bbb80f5f5d777f7d49f18fabbf9
+ from	:0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
+ to	:MedicalRecord.registerAsPatient(string) 0xd9145CCE52D386f254917e481eB44e9943F39138
+ gas	:80000000 gas
+ transaction cost	:80000000 gas
+ execution cost	:673008 gas
+ hash	:0xa1352b672289a03105db81720d3d917b86a3bc1058d29141cb373ef0de2fdbde
+ Updated at: 21-08-08T17:23:57.050Z
+ Created at: 21-08-08T17:23:57.050Z
